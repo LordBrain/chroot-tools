@@ -17,7 +17,7 @@ usage = putStrLn $
 main = do
     args <- getArgs
     when (length args /= 2) $ usage >> exitFailure 
-    let [schrtname , fstabfilename , mtabfile] = args
+    let [fstabfilename , mtabfile] = args
     fstab <- fmap (filter ("/" `isPrefixOf`) . lines) $ readFile fstabfilename
     mounts <-  fmap lines $ readFile "/proc/mounts"
     let new_mtab = nub [ x | x <- mounts, y <- fstab, ((==) `on` (take 1 . drop 1) ) x y]
