@@ -1,10 +1,9 @@
-all: $(ALLTARGS)
+all: update-chroot-mtabs chroot-mtab
 
-ALLTARGS := update-chroot-mtab chroot-mtab
+ALLTARGS := update-chroot-mtabs chroot-mtab
 
 # 
-SRCS := randomsound.c bitbuffer.c debias.c micfill.c
-HDRS := bitbuffer.h debias.h micfill.h
+SRCS := update-chroot-mtabs.hs chroot-mtab.hs
 
 LINK := gcc
 CC := gcc
@@ -14,7 +13,7 @@ OBJS := $(SRCS:.hs=.o)
 HIS := $(SRCS:.hs=.hi)
 
 
-update-chroot-mtab: update-chroot-mtab.hs
+update-chroot-mtabs: update-chroot-mtabs.hs
 	ghc $^
 
 chroot-mtab: chroot-mtab.hs
