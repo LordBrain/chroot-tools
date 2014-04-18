@@ -13,11 +13,14 @@ These tools were specifically made to work with the schroot program.
 I have tested only on my system, Debian wheezy with a jessie chroot.
 
 
-chroot-mtab - "Copies" a single fstab file to an mtab file, making appropriate
-              transformation.  The paths are specified as arguments.
+== chroot-mtab ==
+              `chroot-mtab` performs a transformation on a single fstab 
+              file, outputing to a specified mtab file.
+              The paths are specified as arguments.
               
               
-update-chroot-mtabs - Takes no arguments. Actually looks at the output of
+== update-chroot-mtabs ==
+                      Takes no arguments. Actually looks at the output of
 
                         schroot -i --all-sessions
                         
