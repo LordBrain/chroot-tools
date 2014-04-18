@@ -13,13 +13,15 @@ These tools were specifically made to work with the schroot program.
 I have tested only on my system, Debian wheezy with a jessie chroot.
 
 
-== chroot-mtab ==
+chroot-mtab:
+
               `chroot-mtab` performs a transformation on a single fstab 
               file, outputing to a specified mtab file.
               The paths are specified as arguments.
               
               
-== update-chroot-mtabs ==
+update-chroot-mtabs:
+
                       Takes no arguments. Actually looks at the output of
 
                         schroot -i --all-sessions
@@ -33,8 +35,8 @@ I have tested only on my system, Debian wheezy with a jessie chroot.
                       a block device is mounted.
                       
                       
-Warning
-=======
+
+Security disclaimer...:
 This is in no way meant to be an aid in isolating the host environment 
 from would be hackers.  Remember the term "Chroot Jail" is a misnomer. If a
 jail is what you need, then a chroot is not.
